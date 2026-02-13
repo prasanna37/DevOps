@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-MONGO_URI = "mongodb+srv://prasannastrato_db_user:lexlHCzfn9EE1zPm@cluster0.5glz12y.mongodb.net/kpdb?retryWrites=true&w=majority" #os.environ.get("MONGO_URI")
+MONGO_URI = os.environ.get("MONGO_URI") #(I have created MONGO_URI as environment variable in my laptop)
 
 client = MongoClient(MONGO_URI)
 db = client["mydatabase"]
